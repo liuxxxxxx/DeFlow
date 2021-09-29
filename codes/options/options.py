@@ -35,7 +35,7 @@ def parse(opt_path, is_train=True):
         # if dataset.get('dataroot_GT_bg', None) is not None:
         #     dataset['dataroot_GT_bg'] = osp.expanduser(dataset['dataroot_GT_bg'])
         if dataset.get('dataroot_LQ', None) is not None:
-            if type(dataset['dataroot_GT']) == list:
+            if type(dataset['dataroot_LQ']) == list:
                 dataset['dataroot_LQ'] = [osp.expanduser(p) for p in dataset['dataroot_LQ']]
             else: 
                 dataset['dataroot_LQ'] = osp.expanduser(dataset['dataroot_LQ'])
